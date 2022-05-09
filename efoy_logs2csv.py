@@ -37,7 +37,7 @@ def splitfile2csv(file,outfile):
     writer = csv.writer(csvfile) #using python csv module for simplicity
     for line in logfile:
         out = []
-        split = line.split(', ') #start off splitting the line by spaces
+        split = line.split(', ') #start off splitting the line by commas and spaces
         dateinfo = split.pop(0) #the first few elements need some more splitting because of how the logfile is structured
         dateinfo = dateinfo.split(' ')
         split[:0] = dateinfo
