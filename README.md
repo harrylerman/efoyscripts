@@ -43,7 +43,7 @@ Each line of the logfile consists of the Unix epoch time (ctime), human-readable
 		Example: (cartridge 1 consumed 1.00 l): DuoCartSwitch is active. Since last fuel cartridge switch, 1 litre of methanol has been used.
 		
 	'warning': Warning status.
-		Warning: An information is displayed and an action isrequired.
+		Warning: An information is displayed and an action is required.
 		No warning: No action is required.
 		
 	'SFC>': this is the terminal prompt returned at the end of the message. 
