@@ -48,7 +48,4 @@ Each line of the logfile consists of the Unix epoch time (ctime), human-readable
 		
 	'SFC>': this is the terminal prompt returned at the end of the message. 
 
-efoy_logs2csv: reads in efoy logfiles between a specified start date and stop date
-and outputs to a csv file. Parameters to change in the script before running are 
-startdate, stopdate, filepath of the efoy log files, and output directory (the output
-directory probably has to be created).
+efoy_logs2csv: reads in efoy logfiles between a specified start date and stop date and outputs to a csv file, making the "largely unformatted string" output by the EFOY more workable. Parameters to change in the script before running are startdate, stopdate, filepath of the efoy log files, and output directory (the output directory probably has to be created).
