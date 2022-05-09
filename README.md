@@ -5,7 +5,7 @@ efoyserial: reads in from the EFOY once per minute and prints to a logfile.
 Finds the EFOY via the USB product ID (pid) and vendor ID (vid) of the USB-serial adapter,
 so if changing the adapter have to change those parameters.
 
-Each line of the logfile consists of the Unix epoch time (ctime), human-readable date and time, and then the output of the 'SFC' command. From the EFOY interface user manual (pg. 36), the output of this command includes "a largely unformatted string" of the following parameters:
+Each line of the logfile consists of the Unix epoch time (ctime), human-readable date and time, and then the output of the 'SFC' command. From the EFOY interface user manual (pgs. 22 and 36), the output of this command includes "a largely unformatted string" of the following parameters:
 
 	'SFC': this is the command itself.
 
