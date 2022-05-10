@@ -57,11 +57,8 @@ if __name__ == "__main__":
     '''
     startdate = 20210901
     stopdate = 20210902
-    # filepath = "/home/pi/logs/efoy/"
-    # outpath = "/home/pi/logs/efoy_csv/"
-    
-    filepath = 'C:/Users/harry/OneDrive/Documents/McGill stuff/dronescripts/datatest/log_files/'
-    outpath = 'C:/Users/harry/OneDrive/Documents/McGill stuff/dronescripts/datatest/'
+    filepath = "/home/pi/logs/efoy/"
+    outpath = "/home/pi/logs/efoy_csv/"
     
     outname = str(startdate)+"_"+str(stopdate)+".csv"
     outfile = outpath+outname
