@@ -33,16 +33,16 @@ def splitfile2csv(file,outfile):
     output csv file to write to.
     '''
     logfile = open(file, 'r')
-    csvfile = open(outfile, 'a+')
+    csvfile = open(outfile, 'a+', newline='')
     writer = csv.writer(csvfile) #using python csv module for simplicity
     for line in logfile:
         out = []
-        split = line.split(', ') #start off splitting the line by commas and spaces
+        split = line.split("\', \'") #start off splitting the line by commas and spaces
         dateinfo = split.pop(0) #the first few elements need some more splitting because of how the logfile is structured
         dateinfo = dateinfo.split(' ')
         split[:0] = dateinfo
         for item in split:
-            out.append(re.sub(r'[^A-Za-z0-9 .:-]', '', item)) #strip out unwanted characters
+            out.append(re.sub(r'[^A-Za-z0-9 .,:-]', '', item)) #strip out unwanted characters
         writer.writerow(out) #use the csv python module to write to the csv file  
     logfile.close() #done reading logfile
     csvfile.close() #done writing as well
@@ -55,11 +55,14 @@ if __name__ == "__main__":
     startdate_stopdate.csv in the outpath directory (this directory probably
     has to be created)
     '''
-    startdate = 20220504
-    stopdate = 20220508
-    filepath = "/home/pi/logs/efoy/"
-    outpath = "/home/pi/logs/efoy_csv/"
-
+    startdate = 20210901
+    stopdate = 20210902
+    # filepath = "/home/pi/logs/efoy/"
+    # outpath = "/home/pi/logs/efoy_csv/"
+    
+    filepath = 'C:/Users/harry/OneDrive/Documents/McGill stuff/dronescripts/datatest/log_files/'
+    outpath = 'C:/Users/harry/OneDrive/Documents/McGill stuff/dronescripts/datatest/'
+    
     outname = str(startdate)+"_"+str(stopdate)+".csv"
     outfile = outpath+outname
     
